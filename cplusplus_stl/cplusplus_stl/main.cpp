@@ -6,6 +6,7 @@
 #include <numeric>
 #include <functional>
 #include <array>
+#include "stack_unit.hpp"
 
 template<typename T>
 void output(T &t) { std::cout << t << ' '; }
@@ -42,11 +43,31 @@ int main(int argc, char*argv[])
 	/*直接申明命名空间的函数*/
 	// using vector_unit::vector_unit;
 	// vector_unit<int, int>(10, 3);
-	vector_unit::vector_unit<int>(10, 3);
+	// vector_unit::vector_unit<int>(10, 3);
 	
+	using ::stack_unit::CArrayStack;
+	using ::stack_unit::CListStack;
+
+	CArrayStack<int, 100> stk;
+	CListStack<int> lt_stk;
 
 
+	cout << "stack push operator" << endl;
+	for (int i = 0; i < 10; i++) {
+		stk.push(i);
+		lt_stk.push(i);
+	}
 
+	stk.dump();
+	lt_stk.dump();
 
+	cout << "stack pop operator" << endl;
+	for (int i = 0; i < 7; i++) {
+		stk.pop();
+		lt_stk.pop();
+	}
+
+	stk.dump();
+	lt_stk.dump();
 	return 0;
 }

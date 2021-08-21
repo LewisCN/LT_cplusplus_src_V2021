@@ -26,5 +26,8 @@
     <ClInclude Include="config.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="stack_unit.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
