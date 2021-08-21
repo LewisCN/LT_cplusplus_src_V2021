@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="vector_unit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.h" />
