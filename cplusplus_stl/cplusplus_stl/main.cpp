@@ -13,6 +13,10 @@ int main(int argc, char*argv[])
 	using namespace std;
 	vector<int> v(10, 3);
 
+	for (int i = 0; i < v.size(); i++) {
+		v.push_back(i);
+	}
+
 	for_each(v.begin(), v.end(), output<int>);
 
 	
